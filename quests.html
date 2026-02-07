@@ -1,0 +1,73 @@
+<!-- quests.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quests - E.TBYTES</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <nav class="navbar">
+        <div class="logo">E.TBYTES</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="quests.html">Quests</a></li>
+            <li><a href="terminal.html">Terminal</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    <main>
+        <section class="quests">
+            <h1>Tech Quests</h1>
+            <p>Test your knowledge with these tech quizzes!</p>
+            <div id="quiz">
+                <h2>Question 1: What does HTML stand for?</h2>
+                <ul>
+                    <li><button onclick="checkAnswer('Hyper Text Markup Language', true)">Hyper Text Markup Language</button></li>
+                    <li><button onclick="checkAnswer('Hyperlinks and Text Markup Language', false)">Hyperlinks and Text Markup Language</button></li>
+                    <li><button onclick="checkAnswer('Home Tool Markup Language', false)">Home Tool Markup Language</button></li>
+                </ul>
+                <p id="result1"></p>
+            </div>
+            <!-- Add more quiz questions similarly -->
+            <div class="placeholder-image">❓🧠💡</div> <!-- Random emojis for visibility -->
+        </section>
+        <section class="terminal-section">
+    <div id="terminal">
+        <div id="output">
+            <p>Welcome to <span class="highlight">E.TBYTES PORTFOLIO TERMINAL</span> v1.3.3</p>
+            <p>25 commands available • start with <span class="highlight">help</span> or try <span class="highlight">neofetch</span></p>
+            <p>────────────────────────────────────────────────────</p>
+        </div>
+        <div class="input-line">
+            <span class="prompt">guest@etbytes:~$</span>
+            <input type="text" id="input" autocomplete="off" autofocus>
+        </div>
+    </div>
+</section>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        function checkAnswer(answer, isCorrect) {
+            const result = document.getElementById('result1');
+            if (isCorrect) {
+                result.textContent = 'Correct! 🎉';
+                result.style.color = 'green';
+            } else {
+                result.textContent = 'Wrong! Try again. 😔';
+                result.style.color = 'red';
+            }
+        }
+        // Add more functions for additional questions
+    </script>
+</body>
+</html>

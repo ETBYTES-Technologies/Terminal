@@ -1,0 +1,334 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    background: #0a0a0a;
+    color: #00ff00;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Particles container */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(10, 10, 10, 0.9);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #00ff00;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: #00ff00;
+    color: #000;
+    text-shadow: none;
+}
+
+/* Burger menu for mobile */
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background: #00ff00;
+    transition: 0.3s;
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Hero sections */
+.hero, .about, .projects, .quests, .terminal-hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    background: rgba(0, 255, 0, 0.05);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 15px #00ff00;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.placeholder-image {
+    font-size: 5rem;
+    margin-top: 2rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Terminal Section */
+.terminal-section {
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.terminal-section h2 {
+    margin-bottom: 1rem;
+    color: #00ff00;
+}
+
+/* Terminal styling */
+#terminal {
+    background: #000;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    padding: 1rem;
+    min-height: 400px;
+    max-height: 600px;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+}
+
+#output {
+    white-space: pre-wrap;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    min-height: 300px;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.prompt {
+    color: #00ff00;
+    font-weight: bold;
+}
+
+#input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #00ff00;
+    font-size: 1rem;
+    outline: none;
+    font-family: 'Courier New', monospace;
+    padding: 0.5rem 0;
+}
+
+/* Terminal highlight */
+.highlight {
+    color: #ffff00;
+    font-weight: bold;
+    text-shadow: 0 0 5px #ffff00;
+}
+
+/* Quiz styles */
+#quiz {
+    background: rgba(0, 255, 0, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+#quiz h2 {
+    margin-bottom: 1rem;
+    color: #00ff00;
+}
+
+#quiz ul {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+#quiz li {
+    margin: 0.5rem 0;
+}
+
+#quiz button {
+    background: rgba(0, 255, 0, 0.2);
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+}
+
+#quiz button:hover {
+    background: rgba(0, 255, 0, 0.4);
+    transform: translateX(10px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: rgba(10, 10, 10, 0.95);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 2rem;
+        border-top: 2px solid #00ff00;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .burger.active .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.active .line2 {
+        opacity: 0;
+    }
+
+    .burger.active .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero, .about, .projects, .quests, .terminal-hero {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff00;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00cc00;
+}
+/* Terminal Output Styles */
+#output p {
+    margin: 0.5rem 0;
+}
+
+#output .success {
+    color: #00ff00;
+}
+
+#output .error {
+    color: #ff0000;
+}
+
+#output .info {
+    color: #00ffff;
+}
+
+#output .warning {
+    color: #ffff00;
+}
+
+/* Command line styles */
+.command-line {
+    color: #00ff00;
+    margin-bottom: 0.5rem;
+}
+
+/* Ascii art styles */
+.ascii-art {
+    color: #00ff00;
+    white-space: pre;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin: 1rem 0;
+}
+
+/* Responsive terminal */
+@media (max-width: 768px) {
+    #terminal {
+        min-height: 300px;
+        max-height: 400px;
+    }
+    
+    .ascii-art {
+        font-size: 0.7rem;
+    }
+}

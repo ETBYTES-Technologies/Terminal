@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal - E.TBYTES</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <nav class="navbar">
+        <div class="logo">E.TBYTES</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="quests.html">Quests</a></li>
+            <li><a href="terminal.html" class="active">Terminal</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="terminal-hero">
+            <h1>Interactive Terminal</h1>
+            <p>Type commands below — try <code>help</code> to begin 🚀</p>
+        </section>
+
+        <section class="terminal-section">
+    <div id="terminal">
+        <div id="output">
+            <!--  ←─ ADD THE WELCOME LINES HERE  ──► -->
+            <p>Welcome to <span class="highlight">E.TBYTES INTERACTIVE TERMINAL</span> v1.3.3</p>
+            <p>25 commands available • start with <span class="highlight">help</span> or try <span class="highlight">neofetch</span></p>
+            <p>────────────────────────────────────────────────────</p>
+
+            <!-- You can keep or remove any older welcome text that was already here -->
+        </div>
+        <div class="input-line">
+            <span class="prompt">guest@etbytes:~$</span>
+            <input type="text" id="input" autocomplete="off" autofocus>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
