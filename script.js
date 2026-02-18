@@ -90,7 +90,7 @@ Type <span class="highlight">help [command]</span> for more info on a specific c
 ───────────────────────────────────────────────
 <span class="highlight">OS:</span> E.TBYTES Portfolio
 <span class="highlight">Host:</span> Elvis Teddy @ Digital Realm  
-<span class="highlight">Kernel:</span> JavaScript ES6+
+<span class="highlight">Kernel:</span> kali linus s64 1230xv12
 <span class="highlight">Shell:</span> Interactive Web Terminal
 <span class="highlight">Theme:</span> Cyberpunk Green
 <span class="highlight">Terminal:</span> v1.3.3
